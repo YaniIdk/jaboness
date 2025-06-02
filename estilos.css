@@ -1,0 +1,227 @@
+/* ======== BASE Y RESET ======== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fef9f5;
+  color: #3e3e3e;
+  height: 100%;
+}
+
+
+/* ======== HEADER ======== */
+header {
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+/* NUEVO HEADER CON LOGO A LA IZQUIERDA */
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo-grande {
+  width: 120px;
+  height: auto;
+}
+
+.titulo-container {
+  text-align: left;
+}
+
+.titulo-container .titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #5A4A42;
+  margin: 0;
+}
+
+.titulo-container p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #5A4A42;
+  margin: 0;
+}
+
+/* ======== NAVBAR ======== */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #e8ded2;
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5A4A42;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #9c7e6c;
+}
+
+/* ======== FOOTER ======== */
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #e8ded2;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #5A4A42;
+}
+
+/* ======== SECCIONES DE TEXTO (descripción, comprar, contacto) ======== */
+.section-texto {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fffefc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.section-texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #5A4A42;
+}
+
+.section-texto p, .section-texto ol {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3e3e3e;
+}
+
+.section-texto ol {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+.section-texto {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fffefc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+
+/* ======== CATÁLOGO TARJETAS (para catalogo.html) ======== */
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.producto {
+  perspective: 1000px;
+  width: 200px;
+  height: 260px;
+}
+
+.tarjeta {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.producto:hover .tarjeta,
+.tarjeta.girada {
+  transform: rotateY(180deg);
+}
+
+.frente, .dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.frente img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dorso {
+  transform: rotateY(180deg);
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 600px) {
+  nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #e8ded2;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+  .catalogo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 90%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
